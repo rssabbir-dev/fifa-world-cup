@@ -211,6 +211,8 @@ footer {
         flex-direction: column;
         background: rgb(2, 0, 36);
         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
+        gap:0px;
+        height:90vh;
     }
 
     .banner-content {
@@ -260,6 +262,13 @@ footer {
 }
 
 @media (min-width: 570px) and (max-width: 680px) {
+    .header-banner {
+            flex-direction: column;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
+            gap: 0px;
+            height: 90vh;
+        }
     .blog {
         width: 250px
     }
@@ -272,6 +281,8 @@ footer {
         flex-direction: column;
         background: rgb(2, 0, 36);
         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
+        gap: 0px;
+            height: 90vh;
     }
 
     .banner-content {
