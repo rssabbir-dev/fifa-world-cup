@@ -1,0 +1,19 @@
+.match{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0px;
+}
+.match-img { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.match-img > img{
+    width: 100px;
+}
+.match-img p{
+    font-size:24px;
+    padding:5px;
+}

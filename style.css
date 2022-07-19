@@ -6,6 +6,372 @@
 /* -----------------------------------------
       Utilities CSS or Global CSS Style
  ---------------------- ----------------------*/
- body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
- }
+}
+
+section,
+aside {
+    margin: 50px 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.primary-btn {
+    padding: 16px 25px 16px 25px;
+    background-color: #0031AA;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    gap: 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+/* -------------------------
+      Header CSS Style
+ --------------------------*/
+
+.header-banner {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
+    border-radius: 30px;
+    color: #fff;
+    height: 90vh;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* .header-banner > div{
+    flex:1;
+} */
+.banner-content {
+    max-width: 530px;
+    /* padding-left: 5rem; */
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+
+}
+
+.banner-content h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.banner-img {
+    align-items: flex-end;
+    height: 100%;
+}
+
+.banner-img img {
+    width: 381px;
+}
+
+
+main {
+    display: flex;
+    gap: 30px
+}
+
+aside {
+    flex: 1;
+}
+
+.side-menu {
+    background: #161616;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.side-menu ul {
+    list-style: none;
+
+}
+
+.nav-link {
+    text-decoration: none;
+    display: block;
+    margin: 15px 0px;
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+    color: #161616;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.active-link {
+    color: #fff;
+    background-color: #0031AA;
+}
+
+.blogs {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-row-gap: 50px;
+    justify-items: center;
+}
+
+.blog {
+    width: 300px;
+    border: 1px solid #E8E8E8;
+    gap: 20px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.blog-content {
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+}
+
+.blog-label {
+    border: 1px solid #161616;
+    padding: 5px 15px;
+    ;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.blog-label:hover {
+    color: #0031AA;
+    border: 1px solid #0031AA;
+}
+
+.blog-update {
+    gap: 20px;
+}
+
+footer {
+    background-color: #090975;
+    color: #fff;
+    height: 250px;
+}
+
+.footer-container {
+    height: 100%;
+    gap: 30px
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #B9B9B9;
+    font-weight: 500;
+}
+
+.social-icon i {
+    margin: 0px 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #0031aa;
+    border-radius: 50%;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575px) {
+    .header-banner {
+        flex-direction: column;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
+    }
+
+    .banner-content {
+        gap: 10px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 3em;
+    }
+
+    .banner-img img {
+        width: 40%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin: 0;
+    }
+
+    .side-menu {
+        background-color: transparent;
+    }
+
+    .side-menu ul li a {
+        border: 1px solid lightgrey;
+    }
+
+    .blogs {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        height: 100%;
+        padding: 50px
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 680px) {
+    .blog {
+        width: 250px
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .header-banner {
+        flex-direction: column;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
+    }
+
+    .banner-content {
+        gap: 10px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 3em;
+    }
+
+    .banner-img img {
+        width: 30%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin: 0;
+    }
+
+    .side-menu {
+        background-color: transparent;
+    }
+
+    .side-menu ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .side-menu li {
+        flex: 1;
+    }
+
+    .side-menu ul li a {
+        border: 1px solid lightgrey;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        height: 100%;
+        padding: 50px
+    }
+
+    .footer-menu {
+        flex-direction: row;
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner-content {
+        gap: 10px;
+        padding: 20px;
+        flex: 1;
+    }
+
+    .banner-content h1 {
+        font-size: 3em;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin: 0;
+    }
+
+    .side-menu {
+        background-color: transparent;
+    }
+
+    .side-menu ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .side-menu li {
+        flex: 1;
+    }
+
+    .side-menu ul li a {
+        border: 1px solid lightgrey;
+    }
+
+    .blog {
+        width: 250px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

@@ -1,0 +1,32 @@
+@keyframes bannerImgPopUp {
+    0% {
+        transform: scale(0.9) translate(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bannerContentPopUp {
+    0% {
+        transform: scale(0.9) translate(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.banner-img img {
+    animation: bannerImgPopUp 1s linear 1;
+}
+
+.banner-content {
+    animation: bannerContentPopUp 1s linear 1;
+}
