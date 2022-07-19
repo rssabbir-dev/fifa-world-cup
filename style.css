@@ -67,7 +67,7 @@ img {
     height: 90vh;
     gap: 20px;
     overflow: hidden;
-    max-height: 700px;
+    min-height: 600px;
 }
 
 /* .header-banner > div{
