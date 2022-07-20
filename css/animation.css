@@ -40,6 +40,23 @@
         border: 1px solid transparent;
     }
 }
+@keyframes btnArrowAnimation {
+    0% {
+        transform: translate(-2px);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: translate(2px);
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: translate(-2px);
+        opacity: 0.9;
+    }
+}
 @keyframes circleInBtn {
     0% {
         color:transparent;
@@ -64,6 +81,10 @@
 .primary-btn:hover {
     animation: btnAnimation 1s ease-in-out infinite;
     color: red;
+}
+.primary-btn .fa-angle-right{
+    margin-top: 2px;
+    animation: btnArrowAnimation 1.5s ease-in-out infinite;
 }
 .fa-circle{
     animation: circleInBtn 1s ease-in-out infinite;
