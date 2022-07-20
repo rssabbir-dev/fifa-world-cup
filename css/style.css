@@ -43,34 +43,41 @@ img {
     flex-direction: column;
 }
 
-.primary-btn {
+.primary-btn,.secondary-btn {
     padding: 16px 25px 16px 25px;
     background-color: #0031AA;
-    border: none;
+    border: 1px solid #0031AA;
     border-radius: 5px;
     font-size: 20px;
     color: #fff;
     gap: 10px;
     width: fit-content;
     cursor: pointer;
-    transition:all 0.1s;
+    transition: all 0.1s;
 }
-.fa-circle{
-    font-size:12px;
-    display:none;
+.secondary-btn:hover{
+    background-color: transparent;
+    color:#0031AA;
+    border: 1px solid #0031AA;
 }
-.primary-btn:hover .fa-circle{
-    display:block;
+.fa-circle {
+    font-size: 12px;
+    display: none;
 }
-.primary-btn:hover .fa-angle-right{
-    display:none
+
+.primary-btn:hover .fa-circle {
+    display: block;
+}
+
+.primary-btn:hover .fa-angle-right {
+    display: none
 }
 
 /* -------------------------
       Header CSS Style
  --------------------------*/
 
- /* Header Banner CSS Style Here */
+/* Header Banner CSS Style Here */
 .header-banner {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
@@ -114,14 +121,12 @@ main {
 }
 
 /* Aside Or Side Menu Bar CSS Style */
-aside {
-    flex: 1;
-}
 
 .side-menu {
     background: #161616;
     padding: 10px 20px;
     border-radius: 10px;
+    width: 300px;
 }
 
 .side-menu ul {
@@ -148,6 +153,15 @@ aside {
 }
 
 /* Blogs Section CSS Style Here */
+.blog-container {
+    gap: 40px;
+    margin: 50px auto;
+}
+
+.btn-container {
+    display: none;
+}
+
 .blogs {
     flex: 2;
     display: grid;
@@ -158,7 +172,8 @@ aside {
 }
 
 .blog {
-    width: 300px;
+    min-width: 250px;
+    max-width: 300px;
     border: 1px solid #E8E8E8;
     gap: 20px;
     border-radius: 18px;
@@ -187,6 +202,10 @@ aside {
 
 .blog-update {
     gap: 20px;
+}
+
+.btn-container {
+    flex: 1;
 }
 
 /* -----------------------------------------
@@ -221,10 +240,12 @@ footer {
     border-radius: 50%;
     transition: all 0.3s;
 }
+
 .social-icon i:hover {
     background-color: transparent;
 }
-.social-icon a{
+
+.social-icon a {
     color: #fff;
 }
 
@@ -240,7 +261,8 @@ footer {
         background: rgb(2, 0, 36);
         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
         gap: 0px;
-        height: 90vh;
+        height: 100%;
+        justify-content: space-between;
     }
 
     .banner-content {
@@ -264,6 +286,8 @@ footer {
 
     aside {
         margin: 0;
+        display: flex;
+        justify-content: center;
     }
 
     .side-menu {
@@ -298,6 +322,7 @@ footer {
         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
         gap: 0px;
         height: 90vh;
+        justify-content: space-between;
     }
 
     .blog {
@@ -313,7 +338,7 @@ footer {
         background: rgb(2, 0, 36);
         background: linear-gradient(180deg, rgba(2, 0, 36, 1) 25%, rgba(9, 9, 121, 1) 70%);
         gap: 0px;
-        height: 90vh;
+        height: 100%;
     }
 
     .banner-content {
@@ -328,7 +353,7 @@ footer {
     }
 
     .banner-img img {
-        width: 30%;
+        width: 50%;
     }
 
     main {
@@ -341,6 +366,7 @@ footer {
 
     .side-menu {
         background-color: transparent;
+        width: 100%;
     }
 
     .side-menu ul {
@@ -359,6 +385,10 @@ footer {
 
     .blogs {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-container {
+        display: block;
     }
 
     footer {
@@ -385,33 +415,21 @@ footer {
     }
 
     main {
-        flex-direction: column;
-    }
-
-    aside {
-        margin: 0;
-    }
-
-    .side-menu {
-        background-color: transparent;
+        flex-direction: row;
     }
 
     .side-menu ul {
         display: flex;
-        gap: 20px;
-        justify-content: center;
+        flex-direction: column;
+        padding: 7px 0px;
     }
 
-    .side-menu li {
-        flex: 1;
+    .nav-link {
+        margin: 7px 0;
     }
 
-    .side-menu ul li a {
-        border: 1px solid lightgrey;
-    }
-
-    .blog {
-        width: 250px;
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
