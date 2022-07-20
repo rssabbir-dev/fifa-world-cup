@@ -55,11 +55,11 @@
     }
 }
 .banner-img img {
-    animation: bannerImgPopUp 1s linear 1;
+    animation: bannerImgPopUp 1s ease-out 1;
 }
 
 .banner-content {
-    animation: bannerContentPopUp 1s linear 1;
+    animation: bannerContentPopUp 1s ease-out 1;
 }
 .primary-btn:hover {
     animation: btnAnimation 1s ease-in-out infinite;
