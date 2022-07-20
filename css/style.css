@@ -176,6 +176,7 @@ aside {
     background-color: #f3f3f373;
     border-radius: 20px;
     padding: 20px;
+    width: 100%;
 }
 
 .btn-container {
